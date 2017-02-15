@@ -68,7 +68,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="87" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="emC-xQ-c46">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="87" id="4Ux-Ye-jNp">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PartyCell" rowHeight="87" id="4Ux-Ye-jNp" customClass="PartyCell" customModule="PartyRockApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="87"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4Ux-Ye-jNp" id="ZIp-6J-X79">
@@ -99,6 +99,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="videoPreviewImage" destination="mgn-w3-ddn" id="Xep-Bl-u81"/>
+                                            <outlet property="videoTitle" destination="YBG-su-t0h" id="PV9-aD-Fc2"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -119,6 +123,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="tableView" destination="emC-xQ-c46" id="WP2-kK-PkW"/>
                         <segue destination="6f5-MT-LF3" kind="showDetail" identifier="VideoVC" id="bDS-kf-pMv"/>
                     </connections>
                 </viewController>
